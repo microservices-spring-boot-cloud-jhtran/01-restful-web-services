@@ -79,4 +79,6 @@ REST vs SOAP
 Path Parameters
 "/users/{id}/todos/{id}
 
+HTTP Method PATCH - use to update part of an existing resource 
+When talking about REST API we're talking about resources and about what actions we can perform
 
