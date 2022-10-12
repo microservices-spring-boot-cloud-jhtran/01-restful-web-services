@@ -69,5 +69,14 @@ Key Abstraction of REST - Resource
 
 REST vs SOAP
 
+1: How are requests handled?
+- all requests, in regards to Spring MVC, are handled by the DispatcherServlet (Front Controller Pattern)
+  - DispatcherServlet is the first thing that our request goes to irrespective of the URL we're making use of 
+  - this is because the DispatcherServlet is mapped to the root URL 
+  - once the dispatcher servlet gets the request it maps it to the proper controller 
+- Spring Boot App automatically configures the DispatcherServlet 
+
+Path Parameters
+"/users/{id}/todos/{id}
 
 
