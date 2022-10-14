@@ -90,3 +90,10 @@ Important Response Statuses
 401 - Unauthorized (ie. failed authorization)
 404 - Resource Not Found
 500 - Server Error
+
+when running the application in production we'll likely run it as a JAR file 
+- when running a packaged application DevTools is automatically disabled.
+
+Creating custom structure for Custom Error Response
+- define bean for custom Error Response structure 
+
