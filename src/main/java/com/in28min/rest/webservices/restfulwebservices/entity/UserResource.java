@@ -2,7 +2,6 @@ package com.in28min.rest.webservices.restfulwebservices.entity;
 
 import java.net.URI;
 import java.util.List;
-import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -33,7 +32,12 @@ public class UserResource {
     
     @GetMapping("/users/{userId}")
     public User getUserById(@PathVariable int userId) {
-        return service.findById(userId);
+        User user = service.findById(userId);
+        
+        if (user == null) {
+            throw new UserNotFoundException("id: " + userId);
+        }
+        return user;
     }
     
     // the data we're sending is in the request body so we use @RequestBody

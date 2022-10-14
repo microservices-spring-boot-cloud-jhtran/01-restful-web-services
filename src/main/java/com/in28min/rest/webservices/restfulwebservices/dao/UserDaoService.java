@@ -33,7 +33,8 @@ public class UserDaoService {
         Predicate<? super User> predicate = user -> Integer.valueOf(user.getId()).equals(id);
         return users.stream()
                         .filter(predicate)
-                        .findFirst().get();
+                        .findFirst() // throws an exception if null
+                            .orElse(null); // if value is present return value, else return other
     }
     
     // save user
