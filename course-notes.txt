@@ -82,3 +82,11 @@ Path Parameters
 HTTP Method PATCH - use to update part of an existing resource 
 When talking about REST API we're talking about resources and about what actions we can perform
 
+Important Response Statuses
+200 - Success
+201 - Created
+204 - No Content
+400 - Bad Request (ie. validation error)
+401 - Unauthorized (ie. failed authorization)
+404 - Resource Not Found
+500 - Server Error
