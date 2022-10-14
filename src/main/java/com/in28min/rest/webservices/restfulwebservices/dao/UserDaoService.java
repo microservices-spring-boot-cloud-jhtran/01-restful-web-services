@@ -27,6 +27,7 @@ public class UserDaoService {
     public List<User> findAll() {
         return users;
     }
+    
     // get user by id
     public User findById(int id) {
         Predicate<? super User> predicate = user -> Integer.valueOf(user.getId()).equals(id);

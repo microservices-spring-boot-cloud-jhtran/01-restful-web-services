@@ -35,6 +35,7 @@ public class UserResource {
     // the data we're sending is in the request body so we use @RequestBody
     @PostMapping("/users")
     public void createUser(@RequestBody User user) {
+        service.save(user);
         
     }
     
