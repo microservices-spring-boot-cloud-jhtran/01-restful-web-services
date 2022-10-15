@@ -97,3 +97,10 @@ when running the application in production we'll likely run it as a JAR file
 Creating custom structure for Custom Error Response *(important for enterprises)
 - define bean for custom Error Response structure 
 
+@Valid 
+- when using the @Valid annotation during binding
+  - the defined validations are automatically invoked on the object
+
+We should always be thinking from the perspective of consumers
+- improve our response messages
+- improve our response statuses

@@ -15,6 +15,8 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.in28min.rest.webservices.restfulwebservices.dao.UserDaoService;
 
+import jakarta.validation.Valid;
+
 @RestController
 public class UserResource {
     
@@ -43,7 +45,7 @@ public class UserResource {
     
     // the data we're sending is in the request body so we use @RequestBody
     @PostMapping("/users")
-    public ResponseEntity<User> createUser(@RequestBody User user) {
+    public ResponseEntity<User> createUser(@Valid @RequestBody User user) {
         
         User savedUser = service.save(user);
         URI location = ServletUriComponentsBuilder.fromCurrentRequest()
