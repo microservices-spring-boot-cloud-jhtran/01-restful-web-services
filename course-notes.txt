@@ -94,6 +94,6 @@ Important Response Statuses
 when running the application in production we'll likely run it as a JAR file 
 - when running a packaged application DevTools is automatically disabled.
 
-Creating custom structure for Custom Error Response
+Creating custom structure for Custom Error Response *(important for enterprises)
 - define bean for custom Error Response structure 
 
